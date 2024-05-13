@@ -9,15 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Cloud SDK
-        uses: actions/setup-cloud-sdk@v3
-        with:
-          project-id: seznamka-422904
-          use-application-default-credentials: true
-          install-components: |
-            gcloud-build
-          beta-sdk: true
-
       - name: Checkout code
         uses: actions/checkout@v2
 
