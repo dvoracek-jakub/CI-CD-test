@@ -27,12 +27,12 @@ jobs:
         with:
           context: .
           push: true
-          tags: gcr.io/seznamka-422904/CI-CD-test/phpwebserver:latest
+          tags: gcr.io/seznamka-422904/ci-cd-test/phpwebserver:latest
 
       - name: Deploy to Cloud Run
         uses: google-github-actions/deploy-cloudrun@main
         with:
-          image: gcr.io/seznamka-422904/CI-CD-test/phpwebserver:latest
+          image: gcr.io/seznamka-422904/ci-cd-test/phpwebserver:latest
           service: phpwebserver
           region: europe-west2
           platform: managed
