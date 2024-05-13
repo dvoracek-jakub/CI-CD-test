@@ -14,8 +14,4 @@ images:
 options:
   logging: CLOUD_LOGGING_ONLY  # Optional: Enable Cloud Logging if needed
   # ... other options
-
-build:
-  serviceAccount: # Path to your service account
-
 logsBucket: "my-cloud-build-logs"
