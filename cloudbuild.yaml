@@ -11,3 +11,11 @@ steps:
   args: ['run', 'deploy', 'test2', '--image', 'gcr.io/seznamka-422904/test2', '--region', 'europe-west1']
 images:
 - gcr.io/seznamka-422904/test2
+options:
+  logging: CLOUD_LOGGING_ONLY  # Optional: Enable Cloud Logging if needed
+  # ... other options
+
+build:
+  serviceAccount: # Path to your service account
+
+logsBucket: "my-cloud-build-logs"
