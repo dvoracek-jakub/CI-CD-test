@@ -1,17 +1,17 @@
 steps:
-- name: Checkout repository
-  id: checkout
-  dir: /workspace
-  script:
-    - git clone https://github.com/$GITHUB_REPOSITORY.git
+  - name: Checkout repository
+    id: checkout
+    dir: /workspace
+    script:
+      - git clone https://github.com/$GITHUB_REPOSITORY.git
 
-- name: Build Docker images
-  id: build
-  dir: /workspace
-  script:
-    - docker-compose build
+  - name: Build Docker images
+    id: build
+    dir: /workspace
+    script:
+      - docker-compose build
 
-- name: Push Docker images to Container Registry
-  id: push
-  script:
-    - docker-compose push
+  - name: Push Docker images to Container Registry
+    id: push
+    script:
+      - docker-compose push
